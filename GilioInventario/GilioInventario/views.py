@@ -2,6 +2,7 @@ from django.http import HttpRequest
 from django.http.response import HttpResponse
 import datetime
 from django.template.loader import get_template
+from django.shortcuts import render
 
 class persona(object):
 
@@ -12,18 +13,14 @@ class persona(object):
 def login(request):
 
     fecha_agno = datetime.datetime.now().year
-
-    doc_externo=get_template('login/login.html')
-
     datos_persona=persona("Luis Andres","Rodriguez Campos")
-
     cursos=["Django","Larabel","React Js","Boostrap","Jquery","C#"]
-
     datos={"agno":fecha_agno,"datos_persona":datos_persona, "cursos":cursos,"cantidad_cursos":len(cursos)}
 
-    documento = doc_externo.render(datos)
+    plantilla='login/login.html'
 
-    return HttpResponse(documento)
+
+    return render(request,plantilla,datos)
 
 def logout(reques):
     return HttpResponse("Salir de Gilio")
