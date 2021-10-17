@@ -54,7 +54,7 @@ ROOT_URLCONF = 'GilioInventario.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Gilio/Recidencia/proyecto/sistema/GilioInventario/GilioInventario/templetes/'],
+        'DIRS': ['../GilioInventario/GilioInventario/templetes/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
