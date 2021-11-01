@@ -25,7 +25,7 @@ SECRET_KEY = '931h!84&$t&ofyz34rs+rit-%s15+p$2vg^$@ju5srfat6#250'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.66']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -95,7 +95,7 @@ DATABASES = {
         'USER': 'cocxzdrq',
         'PASSWORD': 'YPOd8Iwhcc-bxey69URCPap2OZX75hhE',
         'HOST': 'fanny.db.elephantsql.com',
-        'PORT_PORT': '5432',
+        'PORT_PORT': '1111',
     }
 }
 
