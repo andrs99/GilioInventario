@@ -5,22 +5,38 @@ from django.template.loader import get_template
 from django.shortcuts import render
 
 class persona(object):
-
     def __init__(self, nombre, apellido):
-
         self.nombre=nombre
         self.apellido=apellido
-def login(request):
 
+def login(request):
+    plantilla='login/login.html'
     fecha_agno = datetime.datetime.now().year
     datos_persona=persona("Luis Andres","Rodriguez Campos")
     cursos=["Django","Larabel","React Js","Boostrap","Jquery","C#"]
     datos={"agno":fecha_agno,"datos_persona":datos_persona, "cursos":cursos,"cantidad_cursos":len(cursos)}
-
-    plantilla='login/login.html'
-
-
     return render(request,plantilla,datos)
+
+
+
+
+def administrador(request):
+    plantilla='administrador/dashboard.html' 
+    datos_persona=persona("Luis Andres","Rodriguez Campos")
+    datos={"datos_persona":datos_persona}
+    return render(request,plantilla,datos)
+
+
+
+
+
+
+
+
+
+
+
+    
 
 def logout(reques):
     return HttpResponse("Salir de Gilio")

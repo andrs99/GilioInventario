@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form id="form-alta" method="get">{% csrf_token %}
+        <input id="busqueda" type="text" name="nombre" placeholder="Buscar">
+    </form>
+    <br>
+    <button onclick="Buscar()">
+        Buscar
+    </button>
+
+
+    <script>
+        function Buscar(){
+            var busqueda = document.getElementById('busqueda').value
+            var xhr = new XMLHttpRequest();
+            xhr.withCredentials = true;
+            xhr.addEventListener("readystatechange", function() {
+            if(this.readyState === 4) {
+                // console.log(this.status);
+                obj=JSON.parse(this.responseText)
+                console.log(obj);
+                // console.log(obj[1]['nombre']);
+
+                
+            }
+            });
+            xhr.open("GET", "http://127.0.0.1:8000/buscar_ajax?busqueda="+busqueda);
+            
+            
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form-alta" method="get">{% csrf_token %}
+        <input type="text" name="buscar" placeholder="ID">
+        <input type="text" name="nuevo_nombre" placeholder="Nuevo nombre">
+        <input type="text" name="nuevo_apellido" placeholder="Nuevo apellido">
+    </form>
+    <br>
+    <button onclick="Cambiar()">
+        Cambiar
+    </button>
+
+
+    <script>
+        function getCookie(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        function Cambiar(){
+            var furmulario = new FormData(document.getElementById('form-alta'))
+            fetch("/cambios_ajax/",{
+                method: "POST",
+                body: furmulario,
+                headers:{
+                    "X-CSRFToken": getCookie('csrftoken'),
+                }
+            })
+        }
+    </script>
+</body>
+</html>
