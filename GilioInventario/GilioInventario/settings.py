@@ -95,7 +95,7 @@ DATABASES = {
         'USER': 'cocxzdrq',
         'PASSWORD': 'YPOd8Iwhcc-bxey69URCPap2OZX75hhE',
         'HOST': 'fanny.db.elephantsql.com',
-        'PORT_PORT': '5431',
+        'PORT_PORT': '5434',
     }
 }
 
