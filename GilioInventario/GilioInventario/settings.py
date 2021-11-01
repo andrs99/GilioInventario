@@ -76,16 +76,30 @@ WSGI_APPLICATION = 'GilioInventario.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'cocxzdrq',
+#         'USER': 'cocxzdrq',
+#         'PASSWORD': 'YPOd8Iwhcc-bxey69URCPap2OZX75hhE',
+#         'HOST': 'fanny.db.elephantsql.com',
+#         'PORT_PORT': '5432',
+#     }
+# }
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'inventariosgilio',
         'USER': 'postgres',
         'PASSWORD': 'postgresql',
-        'HOST': '192.168.1.66',
+        'HOST': '127.0.0.1',
         'PORT_PORT': '5432',
     }
 }
+
+
 
 
 # Password validation
