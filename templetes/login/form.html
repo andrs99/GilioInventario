@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nuevo</h1>
+
+    <form id="form-alta" method="get">{% csrf_token %}
+        <input id="nombre" type="text" name="nombre" placeholder="nombre">
+        <input type="text" name="apellido" placeholder="apellido">
+    </form>
+
+    <button onclick="Guardar()">
+        Validar
+    </button>
+
+    lol{{dato}}
+
+
+
+    <script>
+        // function getCookie(name) {
+        //     var cookieValue = null;
+        //     if (document.cookie && document.cookie !== '') {
+        //         var cookies = document.cookie.split(';');
+        //         for (var i = 0; i < cookies.length; i++) {
+        //             var cookie = cookies[i].trim();
+        //             // Does this cookie string begin with the name we want?
+        //             if (cookie.substring(0, name.length + 1) === (name + '=')) {
+        //                 cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+        //                 break;
+        //             }
+        //         }
+        //     }
+        //     return cookieValue;
+        // }
+
+        // function Guardar(){
+        //     var furmulario = new FormData(document.getElementById('form-alta'))
+        //     fetch("/prueba_up/",{
+        //         method: "POST",
+        //         body: furmulario,
+        //         headers:{
+        //             "X-CSRFToken": getCookie('csrftoken'),
+        //         }
+        //     })
+        // }
+
+
+        function Guardar(){
+            // var furmulario = new FormData(document.getElementById('form-alta'))
+            // fetch("/prueba_up/",{
+            //     method: "POST",
+            //     body: furmulario,
+            //     headers:{
+            //         "X-CSRFToken": getCookie('csrftoken'),
+            //         "X-Requestted-With": "XMLHttpRequest"
+            //     }
+            // }).then(
+            //     function(response){
+            //         console.log(response)
+            //     }
+            // )
+
+
+            var nombre = document.getElementById('nombre').value
+            
+            
+            var xhr = new XMLHttpRequest();
+            xhr.withCredentials = true;
+
+            xhr.addEventListener("readystatechange", function() {
+            if(this.readyState === 4) {
+                console.log(this.responseText);
+                obj=JSON.parse(this.responseText)
+                console.log(obj);
+
+                if(obj.return==1){
+                    location.href ="http://127.0.0.1:8000/";
+                }else{
+                    alert("Error de usuario");
+                }
+
+                
+            }
+            });
+
+            xhr.open("GET", "http://127.0.0.1:8000/prueba_up?nombre="+nombre);
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+    <body>
+        {% include "../components/asidebar/asidebar.html"%}
+        <h1>Hola pinches putos {{agno}}</h1>
+
+
+        {% if datos_persona.nombre == "Luis Andres" %}
+            {{datos_persona.nombre}}
+            <br>
+            {{datos_persona.apellido}}
+            <br>
+            <p><strong>Cursos impartidos: {{cantidad_cursos}}</strong></p>
+            <ul>
+                {% for  curso in  cursos%}
+                        <li>{{curso}}</li>
+                {% endfor %}
+            </ul>
+
+            {% if cantidad_cursos %}
+                <p><strong>Caegoria</strong></p>
+
+                {% if cantidad_cursos < 2 %}
+                    <label>Novato<label>
+                {% elif cantidad_cursos < 5 %}
+                    <label>Intermedio<label>
+                {% elif cantidad_cursos < 10 %}
+                    <label>Experto<label>
+                {% endif %}
+            {% endif %}
+        {% else %}
+            <p><strong>Tu no eres nadie, sacate alv</strong></p>
+        {% endif %}
+        
+
+        
+        
+
+    </body>
+    
+</html> 
