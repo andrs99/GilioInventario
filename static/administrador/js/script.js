@@ -24,7 +24,7 @@
 
 
 
-//almacenando el div y el boton en unas variables
+// almacenando el div y el boton en unas variables
 var div = document.getElementById('despliegue');
 var but = document.getElementById('boton');
 
