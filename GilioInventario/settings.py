@@ -87,6 +87,8 @@ DATABASES = {
     }
 }
 
+prueba
+
 
 # DATABASES = {
 #     'default': {
