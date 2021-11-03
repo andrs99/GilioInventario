@@ -308,6 +308,7 @@
   position: relative;
   width: 100%;
   height: auto;
+  user-select: none;
 }
 .conteiner .panel .header .header-box .box-perfil .despliegue .info-foto .imagen-perfil img {
   position: relative;
@@ -320,14 +321,17 @@
   color: #111111;
   font-size: 14px;
   font-weight: bold;
+  cursor: text;
 }
 .conteiner .panel .header .header-box .box-perfil .despliegue .info-foto .email-perfil {
   color: #929292;
   font-size: 12px;
+  cursor: text;
 }
 .conteiner .panel .header .header-box .box-perfil .despliegue .info-foto .cargo-perfil {
   color: #929292;
   font-size: 12px;
+  cursor: text;
 }
 .conteiner .panel .header .header-box .box-perfil .despliegue .info-foto:hover {
   background-color: #f0f0f0;
@@ -338,6 +342,7 @@
   justify-content: center;
   align-items: center;
   height: 60px;
+  user-select: none;
 }
 .conteiner .panel .header .header-box .box-perfil .despliegue .opciones-perfil .box-item {
   width: calc(100% - 20px);
