@@ -204,10 +204,45 @@
                                 Luis Andres
                             </div>
                         </div>
-                        <div id="despliegue"class="despliegue" style="display: block;">
-                            <div class="info-foto">
-                                <img src="https://scontent.ftrc2-1.fna.fbcdn.net/v/t1.6435-9/93654212_519963568679867_5720483034784858112_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=aGs3JZ-EhkkAX_QHHQG&tn=UwfVz-_YkPZjQMGN&_nc_ht=scontent.ftrc2-1.fna&oh=cfb07471f490192d1dd7a975d6359623&oe=61A04391" alt="">
+                        <div id="despliegue"class="despliegue" style="display: none;">
+
+                            <div class="info-foto" onclick="event.stopPropagation()">
+                                <div class="imagen-perfil">
+                                    
+                                    <img src="https://scontent.ftrc2-1.fna.fbcdn.net/v/t1.6435-9/93654212_519963568679867_5720483034784858112_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=aGs3JZ-EhkkAX_QHHQG&tn=UwfVz-_YkPZjQMGN&_nc_ht=scontent.ftrc2-1.fna&oh=cfb07471f490192d1dd7a975d6359623&oe=61A04391" alt="">
+                                </div>
+                                <label class="nombre-perfil">Luis Andres Rodriguez Campos</label>
+                                <label class="email-perfil">luis.andres.hamil@gmail.com</label>
+                                <label class="cargo-perfil">Administrador</label>
                             </div>
+                            
+
+                            <div class="opciones-perfil">
+                                <div class="box-item">
+                                    <div class="icon-opciones">
+                                        <div class="box-icon">
+                                            <span class="material-icons">settings</span> 
+                                        </div>
+                                    </div>
+                                    <div class="text-opciones">
+                                        <label>Configraciones</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="logout" class="opciones-perfil">
+                                <div class="box-item">
+                                    <div class="icon-opciones">
+                                        <div class="box-icon">
+                                            <span class="material-icons">logout</span> 
+                                        </div>
+                                    </div>
+                                    <div class="text-opciones">
+                                        <label>Cerrar sesion</label>
+                                    </div>
+                                </div>
+                            </div>  
+
                         </div>
                     </div>
                 </div>
@@ -216,6 +251,9 @@
             </div>
             <div class="contenido">
                 Aqui va el contenido dinamico
+                <div id="box">
+                    <button class="btn">Register</button>
+                  </div>
             </div>
         </div>
     </div>

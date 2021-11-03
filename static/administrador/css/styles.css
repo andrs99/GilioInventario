@@ -286,29 +286,100 @@
 .conteiner .panel .header .header-box .box-perfil .despliegue {
   position: absolute;
   display: none;
-  background-color: #f3f7fa;
+  background-color: white;
   top: 80px;
   width: 250px;
-  height: 400px;
+  height: auto;
   border-radius: 5px;
   box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.15);
 }
 .conteiner .panel .header .header-box .box-perfil .despliegue .info-foto {
   position: relative;
-  background-color: red;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
   width: calc(100% - 20px);
   top: 10px;
-  height: 300px;
+  padding-bottom: 10px;
+  height: auto;
   border-radius: 10px;
-  display: flex;
-  text-align: center;
-  justify-content: center;
 }
-.conteiner .panel .header .header-box .box-perfil .despliegue .info-foto img {
+.conteiner .panel .header .header-box .box-perfil .despliegue .info-foto .imagen-perfil {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.conteiner .panel .header .header-box .box-perfil .despliegue .info-foto .imagen-perfil img {
+  position: relative;
   width: 100px;
   height: 100px;
+  border-radius: 50px;
+  margin: 10px 0px;
+}
+.conteiner .panel .header .header-box .box-perfil .despliegue .info-foto .nombre-perfil {
+  color: #111111;
+  font-size: 14px;
+  font-weight: bold;
+}
+.conteiner .panel .header .header-box .box-perfil .despliegue .info-foto .email-perfil {
+  color: #929292;
+  font-size: 12px;
+}
+.conteiner .panel .header .header-box .box-perfil .despliegue .info-foto .cargo-perfil {
+  color: #929292;
+  font-size: 12px;
+}
+.conteiner .panel .header .header-box .box-perfil .despliegue .info-foto:hover {
+  background-color: #f0f0f0;
+}
+.conteiner .panel .header .header-box .box-perfil .despliegue .opciones-perfil {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+.conteiner .panel .header .header-box .box-perfil .despliegue .opciones-perfil .box-item {
+  width: calc(100% - 20px);
+  height: 45px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.conteiner .panel .header .header-box .box-perfil .despliegue .opciones-perfil .box-item .icon-opciones {
+  width: 45px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.conteiner .panel .header .header-box .box-perfil .despliegue .opciones-perfil .box-item .icon-opciones .box-icon {
+  background-color: #f0f0f0;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #b49c9c;
+}
+.conteiner .panel .header .header-box .box-perfil .despliegue .opciones-perfil .box-item .text-opciones {
+  height: 100%;
+  width: calc(100% - 45px);
+  display: flex;
+  align-items: center;
+}
+.conteiner .panel .header .header-box .box-perfil .despliegue .opciones-perfil .box-item .text-opciones label {
+  position: relative;
+  left: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.conteiner .panel .header .header-box .box-perfil .despliegue .opciones-perfil .box-item:hover {
+  background-color: #f0f0f0;
 }
 .conteiner .panel .contenido {
   background-color: #f3f7fa;

@@ -31,14 +31,14 @@ var but = document.getElementById('boton');
 //la funcion que oculta y muestra
 function showHide(e) {
   e.preventDefault();
-  e.stopPropagation();
+
   if (div.style.display == "none") {
     div.style.display = "block";
   } else if (div.style.display == "block") {
     div.style.display = "none";
 
   }
-  e.stopPropagation()
+  e.stopPropagation();
 }
 //al hacer click en el boton
 but.addEventListener("click", showHide, false);
@@ -47,9 +47,20 @@ but.addEventListener("click", showHide, false);
 document.addEventListener("click", function (e) {
 
   //obtiendo informacion del DOM para  
+  console.log(e.target);
   var clic = e.target;
 
   if (div.style.display == "block" && clic != div) {
     div.style.display = "none";
   }
+
 }, false);
+
+
+
+const btnLogout = document.getElementById('logout');
+btnLogout.addEventListener('click', function (e) {
+  window.location.href = "http://127.0.0.1:8000/logout/";
+  e.stopPropagation();
+});
+
