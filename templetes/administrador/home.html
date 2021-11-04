@@ -198,10 +198,10 @@
                     <div class="box-perfil">
                         <div id="boton" class="box-center">
                             <div class="box-img">
-                                <img src="https://scontent.ftrc2-1.fna.fbcdn.net/v/t1.6435-9/93654212_519963568679867_5720483034784858112_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=aGs3JZ-EhkkAX_QHHQG&tn=UwfVz-_YkPZjQMGN&_nc_ht=scontent.ftrc2-1.fna&oh=cfb07471f490192d1dd7a975d6359623&oe=61A04391" alt="">
+                                <img src="{% static 'img/usr-all.jpg' %}" alt="">
                             </div>
                             <div class="box-nombre">
-                                Luis Andres
+                                {{nombre}}
                             </div>
                         </div>
                         <div id="despliegue"class="despliegue" style="display: none;">
@@ -209,10 +209,12 @@
                             <div class="info-foto" onclick="event.stopPropagation()">
                                 <div class="imagen-perfil">
                                     
-                                    <img src="https://scontent.ftrc2-1.fna.fbcdn.net/v/t1.6435-9/93654212_519963568679867_5720483034784858112_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=aGs3JZ-EhkkAX_QHHQG&tn=UwfVz-_YkPZjQMGN&_nc_ht=scontent.ftrc2-1.fna&oh=cfb07471f490192d1dd7a975d6359623&oe=61A04391" alt="">
+                                    <img src="{% static 'img/usr-all.jpg' %}" alt="">
                                 </div>
-                                <label class="nombre-perfil">Luis Andres Rodriguez Campos</label>
-                                <label class="email-perfil">luis.andres.hamil@gmail.com</label>
+                                <label class="nombre-perfil">{{nombre}} {{apellido}}</label>
+                                <br>
+                                <label class="email-perfil">{{email}}</label>
+                                <br>
                                 <label class="cargo-perfil">Administrador</label>
                             </div>
                             

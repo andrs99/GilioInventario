@@ -16,5 +16,15 @@ def Validar_session(request):
 def AdministradorHome(request):
     if(Validar_session(request)):
         return redirect("/login_validar/")
+
+
+    
+    nombre = request.session["nombre"]
+    apellido = request.session["apellido"]
+    cargo = request.session["cargo"].capitalize()
+    img = request.session["img"]
+    email = request.session["email"]
+
+    datos={"nombre":nombre,"apellido":apellido, "cargo":cargo,"img":img, "email": email}
     plantilla='administrador/home.html'
-    return render(request,plantilla)
+    return render(request,plantilla,datos)

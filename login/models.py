@@ -20,7 +20,7 @@ class Usuarios(models.Model):
     fecha_alta=models.DateField(null=False, verbose_name="Fecha de registro")
     fecha_baja=models.DateField(null=True, verbose_name="Fecha de baja")
     fecha_modificacion=models.DateField(null=True, verbose_name="Fecha del ultimo cambio")
-    img=models.CharField(max_length=30,null=True, default='img_usuarios/all.jpg', verbose_name="Imagen")
+    img=models.CharField(max_length=30,null=True, default='img/usr-all.jpg', verbose_name="Imagen")
     password=models.CharField(max_length=128,null=False, verbose_name="Contraseña")
     email=models.CharField(max_length=50,null=False, verbose_name="Email")
     # autenticacion=models.ForeignKey(User,null=True, on_delete=models.PROTECT, verbose_name="Licencias")

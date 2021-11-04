@@ -44,6 +44,12 @@ def login_ajax(request):
         if(check_password_hash(password_db,password)):
             request.session["sesion"] = True
             request.session["cargo"] = user.cargo
+            request.session["nombre"] = user.nombre
+            request.session["apellido"] = user.apellido
+            request.session["img"] = user.img
+            request.session["email"] = user.email
+
+            print(request.session["img"])
             data = {
                 'mensaje': 'Ususario valido',
                 'return': 1
@@ -64,6 +70,10 @@ def logout(request):
     try:
         del request.session['sesion']
         del request.session["cargo"]
+        del request.session["nombre"]
+        del request.session["apellido"]
+        del request.session["img"]
+        del request.session["email"]
     except:
         pass
     return redirect("http://127.0.0.1:8000/")
