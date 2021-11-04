@@ -195,20 +195,20 @@ def Nuevo_usuario(request):
     # print(password)
 
 
-    # query=Usuarios.objects.create(
-    #     nombre=nombre, 
-    #     apellido=apellido, 
-    #     cargo=cargo, 
-    #     status=status, 
-    #     fecha_alta=fecha_alta, 
-    #     email=email,
-    #     password=password
-    # )  
+    query=Usuarios.objects.create(
+        nombre=nombre, 
+        apellido=apellido, 
+        cargo=cargo, 
+        status=status, 
+        fecha_alta=fecha_alta, 
+        email=email,
+        password=password
+    )  
 
-    # query.save()
+    query.save()
 
-    
-    Usuarios.objects.filter(id = 4).delete()
+    # print("ok")
+    # Usuarios.objects.filter(id = 1).delete()
     data = {
         'resturn': 'no encontrado',
         'return': 0
@@ -216,7 +216,7 @@ def Nuevo_usuario(request):
     return JsonResponse(data)
 
 def SuperSuHome(request):
-    if(Validar_session(request)):
-        return redirect("/login_validar/")
+    # if(Validar_session(request)):
+    #     return redirect("/login_validar/")
     plantilla='supersu/home.html'
     return render(request,plantilla)

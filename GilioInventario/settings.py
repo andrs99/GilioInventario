@@ -93,9 +93,9 @@ WSGI_APPLICATION = 'GilioInventario.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'cocxzdrq',
-        'USER': 'cocxzdrq',
-        'PASSWORD': 'YPOd8Iwhcc-bxey69URCPap2OZX75hhE',
+        'NAME': 'xwiofemu',
+        'USER': 'xwiofemu',
+        'PASSWORD': 'Mc00WLRZ3NLZMgJRkhxQwHFv59Tj30TA',
         'HOST': 'fanny.db.elephantsql.com',
         'PORT_PORT': '5432',
     }
