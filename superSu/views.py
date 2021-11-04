@@ -178,6 +178,8 @@ def Nuevo_usuario(request):
     password=request.POST["password"]
     password=generate_password_hash(password)
 
+
+
     
 
     # print(password)
@@ -206,7 +208,7 @@ def Nuevo_usuario(request):
     # query.save()
 
     
-    Usuarios.objects.filter(id = 2).delete()
+    Usuarios.objects.filter(id = 4).delete()
     data = {
         'resturn': 'no encontrado',
         'return': 0

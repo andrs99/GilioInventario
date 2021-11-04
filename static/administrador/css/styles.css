@@ -6,7 +6,7 @@
 }
 
 .conteiner {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   min-height: 100vh;
   display: flex;
@@ -14,8 +14,7 @@
 .conteiner .asidebar {
   background-color: #2f49d0;
   width: 320px;
-  min-width: 300px;
-  height: 100%;
+  height: 100vh;
   user-select: none;
 }
 .conteiner .asidebar .box-search {
@@ -24,8 +23,7 @@
 }
 .conteiner .asidebar .box-opciones {
   width: 100%;
-  height: 50%;
-  min-height: 350px;
+  height: 55vh;
   box-shadow: -12px 17px 0px -15px rgba(255, 255, 255, 0.274);
 }
 .conteiner .asidebar .box-opciones .box-item {
@@ -65,7 +63,7 @@
 }
 .conteiner .asidebar .box-sucursales {
   width: 100%;
-  height: calc(50% - 80px);
+  height: calc(45vh - 80px);
   min-height: 100px;
   display: flex;
   justify-content: center;
@@ -165,7 +163,7 @@
 }
 .conteiner .panel {
   background-color: #f3f7fa;
-  width: calc(100% - 320px);
+  width: calc(100vw - 320px);
   height: 100%;
   min-width: 850px;
 }
@@ -331,7 +329,7 @@
 .conteiner .panel .header .header-box .box-perfil .despliegue .info-foto .cargo-perfil {
   color: #929292;
   font-size: 12px;
-  cursor: text;
+  user-select: none;
 }
 .conteiner .panel .header .header-box .box-perfil .despliegue .info-foto:hover {
   background-color: #f0f0f0;

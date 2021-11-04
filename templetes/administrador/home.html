@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gilio Inventarios</title>
+    <title>{% block title%} {% endblock %}</title>
     <!-------------------------------------------------------------------------------------------------------------------------------
     ----- CDN REACT JS
     --------------------------------------------------------------------------------------------------------------------------------->
@@ -216,6 +216,7 @@
                                 <label class="cargo-perfil">Administrador</label>
                             </div>
                             
+                            
 
                             <div class="opciones-perfil" onclick="event.stopPropagation()">
                                 <div class="box-item">
@@ -231,8 +232,8 @@
                             </div>
 
                             <div class="opciones-perfil" onclick="event.stopPropagation()">
-                                <div class="box-item">
-                                    <div id="logout" class="icon-opciones">
+                                <div id="logout" class="box-item">
+                                    <div class="icon-opciones">
                                         <div class="box-icon">
                                             <span class="material-icons">logout</span> 
                                         </div>
@@ -250,10 +251,9 @@
                 
             </div>
             <div class="contenido">
-                Aqui va el contenido dinamico
-                <div id="box">
-                    <button class="btn">Register</button>
-                  </div>
+                {% block content%} 
+        
+                {% endblock %}
             </div>
         </div>
     </div>
