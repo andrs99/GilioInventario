@@ -408,7 +408,7 @@
 }
 .conteiner .panel .contenido .contenido-panel .panel-box {
   background-color: #ad3838;
-  width: calc(100% - 10px);
+  width: calc(100% - 5px);
 }
 .conteiner .panel .contenido .contenido-panel::-webkit-scrollbar {
   width: 5px;
