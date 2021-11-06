@@ -64,3 +64,23 @@ btnLogout.addEventListener('click', function (e) {
   e.stopPropagation();
 });
 
+
+const btnHome = document.getElementById('btnHome');
+const btnInventario = document.getElementById('btnInventario');
+
+var URLactual = window.location;
+
+if(URLactual == 'http://127.0.0.1:8000/administrador/'){
+  btnHome.classList.add("box-item-panel-active");
+}else if (URLactual == 'http://127.0.0.1:8000/administrador/inventario'){
+  btnInventario.classList.add("box-item-panel-active");
+}
+
+btnHome.addEventListener('click', function (e) {
+  window.location.href = "http://127.0.0.1:8000/administrador/";
+});
+btnInventario.addEventListener('click', function (e) {
+  window.location.href = "http://127.0.0.1:8000/administrador/inventario";
+});
+
+

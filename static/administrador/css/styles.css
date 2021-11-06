@@ -34,11 +34,11 @@
   align-items: center;
 }
 .conteiner .asidebar .box-opciones .box-item .box-item-panel {
-  height: 40px;
   width: 85%;
+  height: 40px;
+  color: #c0c4dc;
   border-radius: 10px;
   transition: all 0.2s;
-  color: #c0c4dc;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,8 +51,8 @@
   align-items: center;
 }
 .conteiner .asidebar .box-opciones .box-item .box-item-panel .box-text {
-  height: 100%;
   width: calc(100% - 60px);
+  height: 100%;
   display: flex;
   align-items: center;
   font-size: 18px;
@@ -60,6 +60,9 @@
 .conteiner .asidebar .box-opciones .box-item .box-item-panel:hover {
   background-color: rgba(26, 43, 129, 0.233);
   cursor: pointer;
+}
+.conteiner .asidebar .box-opciones .box-item .box-item-panel-active {
+  background-color: rgba(26, 43, 129, 0.233);
 }
 .conteiner .asidebar .box-sucursales {
   width: 100%;
@@ -230,12 +233,14 @@
   color: white;
 }
 .conteiner .panel .header .header-box .box-perfil {
+  position: relative;
   float: right;
   width: 250px;
   width: 250px;
   height: 100%;
   display: block;
   text-align: center;
+  z-index: 2;
 }
 .conteiner .panel .header .header-box .box-perfil .box-center {
   position: relative;
@@ -388,6 +393,35 @@
   background-color: #f3f7fa;
   width: 100%;
   height: calc(100% - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.conteiner .panel .contenido .contenido-panel {
+  background-color: red;
+  position: relative;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  left: 5px;
+  top: 5px;
+  overflow-y: scroll;
+}
+.conteiner .panel .contenido .contenido-panel .panel-box {
+  background-color: #ad3838;
+  width: calc(100% - 5px);
+}
+.conteiner .panel .contenido .contenido-panel::-webkit-scrollbar {
+  width: 5px;
+  /* Tamaño del scroll en vertical */
+  height: 8px;
+  /* Tamaño del scroll en horizontal */
+}
+.conteiner .panel .contenido .contenido-panel::-webkit-scrollbar-thumb {
+  background: #c0c4dc;
+  border-radius: 4px;
+}
+.conteiner .panel .contenido .contenido-panel::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
 }
 
 /*# sourceMappingURL=styles.css.map */

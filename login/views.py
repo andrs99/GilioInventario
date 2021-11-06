@@ -70,9 +70,6 @@ def logout(request):
     try:
         del request.session['sesion']
         del request.session["cargo"]
-        del request.session["nombre"]
-        del request.session["apellido"]
-        del request.session["img"]
         del request.session["email"]
     except:
         pass
