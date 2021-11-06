@@ -407,7 +407,7 @@
   overflow-y: scroll;
 }
 .conteiner .panel .contenido .contenido-panel .panel-box {
-  background-color: #ad3838;
+  background-color: #922424;
   width: calc(100% - 5px);
 }
 .conteiner .panel .contenido .contenido-panel::-webkit-scrollbar {
