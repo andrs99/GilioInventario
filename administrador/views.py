@@ -1,8 +1,18 @@
 from django.shortcuts import render, redirect
 import datetime
-from superSu.models import prueba
+# from superSu.models import prueba
 from django.http import JsonResponse
+from login.models import Usuarios
 
+
+    
+
+def get_data_user(usr):
+    try:
+        user = Usuarios.objects.get(email__exact=usr)
+        return {"nombre":user.nombre,"apellido":user.apellido, "cargo":user.cargo,"img":user.img, "email": user.email}
+    except:
+        return 1
 
 def Validar_session(request):
     try:
@@ -13,18 +23,24 @@ def Validar_session(request):
     except:
         return 1
 
+# def AdministradorHome(request):
+#     if(Validar_session(request)):
+#         return redirect("/login_validar/")
+#     datos= get_data_user(request.session["email"])
+#     plantilla='administrador/base.html'
+#     return render(request,plantilla,datos)
+
+
 def AdministradorHome(request):
     if(Validar_session(request)):
         return redirect("/login_validar/")
-
-
-    
-    nombre = request.session["nombre"]
-    apellido = request.session["apellido"]
-    cargo = request.session["cargo"].capitalize()
-    img = request.session["img"]
-    email = request.session["email"]
-
-    datos={"nombre":nombre,"apellido":apellido, "cargo":cargo,"img":img, "email": email}
+    datos= get_data_user(request.session["email"])
     plantilla='administrador/home.html'
+    return render(request,plantilla,datos)
+
+def AdministradorInventario(request):
+    if(Validar_session(request)):
+        return redirect("/login_validar/")
+    datos= get_data_user(request.session["email"])
+    plantilla='administrador/inventario.html'
     return render(request,plantilla,datos)

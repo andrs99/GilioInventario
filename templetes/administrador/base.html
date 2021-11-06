@@ -1,27 +1,270 @@
+{% load static %}
+
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
+    <link rel="shortcut icon" href="https://www.gilio.com.mx/public/images/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title%} {% endblock %}</title>
+    <!-------------------------------------------------------------------------------------------------------------------------------
+    ----- CDN REACT JS
+    --------------------------------------------------------------------------------------------------------------------------------->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-------------------------------------------------------------------------------------------------------------------------------
+    ----- CDN ICONOS REDES
+    --------------------------------------------------------------------------------------------------------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <!-------------------------------------------------------------------------------------------------------------------------------
+    ----- DESHABILITAR ZOOM - MOVIL
+    --------------------------------------------------------------------------------------------------------------------------------->
+    <!-- <meta name="viewport" content="target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no" /> -->
+    <!-------------------------------------------------------------------------------------------------------------------------------
+    ----- CDN GOOGLE FONTS
+    --------------------------------------------------------------------------------------------------------------------------------->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <!-------------------------------------------------------------------------------------------------------------------------------
+    ----- CDN GOOGLE ICONS
+    --------------------------------------------------------------------------------------------------------------------------------->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-------------------------------------------------------------------------------------------------------------------------------
+    ----- ESTILOS CSS
+    --------------------------------------------------------------------------------------------------------------------------------->
+
+    <link rel="stylesheet" href="{% static 'administrador/css/styles.css'%}">
 </head>
 <body>
+    <div class="conteiner">
+        <div class="asidebar">
+            <div class="box-search">
+                
+            </div>
+            <div class="box-opciones">
 
+                <div class="box-item">
+                    <div id="btnHome" class="box-item-panel">
+                        <div class="box-icon">
+                            <span class="material-icons">dashboard</span>       
+                        </div>
+                        <div class="box-text">
+                            {{clase}}
+                            Inicio
+                        </div>
+                    </div>
+                </div>
 
-    <div class="header">
-        header
+                <div class="box-item">
+                    <div id="btnInventario" class="box-item-panel">
+                        <div class="box-icon">
+                            <span class="material-icons">list_alt</span>       
+                        </div>
+                        <div class="box-text">
+                            Inventario
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-item">
+                    <div class="box-item-panel">
+                        <div class="box-icon">
+                            <span class="material-icons">account_circle</span>       
+                        </div>
+                        <div class="box-text">
+                            Proveedores
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-item">
+                    <div class="box-item-panel">
+                        <div class="box-icon">
+                            <span class="material-icons">pie_chart</span>       
+                        </div>
+                        <div class="box-text">
+                            Estadisticas
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-item">
+                    <div class="box-item-panel">
+                        <div class="box-icon">
+                            <span class="material-icons">local_shipping</span>       
+                        </div>
+                        <div class="box-text">
+                            Ordenes
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-item">
+                    <div class="box-item-panel">
+                        <div class="box-icon">
+                            <span class="material-icons">library_books</span>       
+                        </div>
+                        <div class="box-text">
+                            Reportes
+                        </div>
+                    </div>
+                </div>
+                
+
+           
+            </div>
+            <div class="box-sucursales">
+                <div class="box-panel">
+
+                    <div class="box-item-panel">
+                        <div class="panel-item-sucursal">
+                            <div class="panel-left">
+                                <img src="https://lh4.googleusercontent.com/-YEXqEpexQ_c/WSNr8npXJmI/AAAAAAAAAEs/X4-QnhuG6PIlMGNhFV0RJ_Xc9FgTRTTBwCLIB/photo.jpg" alt="">
+                            </div>
+                            <div class="panel-right">
+                                <div class="box-text">
+                                    <label class="tittle-sucursal">Gilio Del Norte Livestock</label>
+                                    <label class="tittle-estado">Coahuila</label>
+                                    <label class="tittle-ciudad">Cd. Torreon</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-item-panel">
+                        <div class="panel-item-sucursal">
+                            <div class="panel-left">
+                                <img src="https://www.pnc.com/content/dam/pnc-thought-leadership/about/our_commitments/customers/pnc_insights_commitments_bigger-not-better-branch.jpg" alt="">
+                            </div>
+                            <div class="panel-right">
+                                <div class="box-text">
+                                    <label class="tittle-sucursal">Gilio Del Norte Livestock</label>
+                                    <label class="tittle-estado">Zacatecas</label>
+                                    <label class="tittle-ciudad">Cd. Zacatecas</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-item-panel">
+                        <div class="panel-item-sucursal">
+                            <div class="panel-left">
+                                <img src="http://media.mlive.com/businessreview/western_impact/photo/11448741-large.jpg" alt="">
+                            </div>
+                            <div class="panel-right">
+                                <div class="box-text">
+                                    <label class="tittle-sucursal">Gilio Del Norte Livestock</label>
+                                    <label class="tittle-estado">Nuevo leon</label>
+                                    <label class="tittle-ciudad">Cd. Monterry</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-item-panel">
+                        <div class="panel-item-sucursal">
+                            <div class="panel-left">
+                                <img src="https://lh4.googleusercontent.com/-YEXqEpexQ_c/WSNr8npXJmI/AAAAAAAAAEs/X4-QnhuG6PIlMGNhFV0RJ_Xc9FgTRTTBwCLIB/photo.jpg" alt="">
+                            </div>
+                            <div class="panel-right">
+                                <div class="box-text">
+                                    <label class="tittle-sucursal">Gilio Del Norte Livestock</label>
+                                    <label class="tittle-estado">Baja california</label>
+                                    <label class="tittle-ciudad">Cd. La paz</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="header">
+                <div class="header-box">
+                    <div class="box-buscador">
+                        <div class="box-center">
+                            <div class="box-input">
+                                <input type="text">
+                            </div>
+                            <span class="material-icons box-icon">search</span>
+                        </div>
+                    </div>
+                    <div class="box-perfil">
+                        <div id="boton" class="box-center">
+                            <div class="box-img">
+                                <img src="{% static 'img/usr-all.jpg' %}" alt="">
+                            </div>
+                            <label class="box-nombre">{{nombre}}</label>
+                        </div>
+                        <div id="despliegue"class="despliegue" style="display: none;">
+
+                            <div class="info-foto" onclick="event.stopPropagation()">
+                                <div class="imagen-perfil">
+                                    <img src="{% static 'img/usr-all.jpg' %}" alt="">
+                                </div>
+                                <label class="nombre-perfil">{{nombre}} {{apellido}}</label>
+                                <br>
+                                <label class="email-perfil">{{email}}</label>
+                                <br>
+                                <label class="cargo-perfil">Administrador</label>
+                            </div>
+                            
+                            
+
+                            <div class="opciones-perfil" onclick="event.stopPropagation()">
+                                <div class="box-item">
+                                    <div class="icon-opciones">
+                                        <div class="box-icon">
+                                            <span class="material-icons">settings</span> 
+                                        </div>
+                                    </div>
+                                    <div class="text-opciones">
+                                        <label>Configuraciones</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="opciones-perfil" onclick="event.stopPropagation()">
+                                <div id="logout" class="box-item">
+                                    <div class="icon-opciones">
+                                        <div class="box-icon">
+                                            <span class="material-icons">logout</span> 
+                                        </div>
+                                    </div>
+                                    <div class="text-opciones">
+                                        <label>Cerrar sesion</label>
+                                    </div>
+                                </div>
+                            </div>  
+
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="contenido">
+                <div class="contenido-panel">
+                    <div class="panel-box">
+                        {% block content%} {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="asidebar">
-        asidebar
-    </div>
 
-    <div class="content">
-        {% block content%} 
-        
-        {% endblock %}
-    </div>
-    
+   
+    <script src="{% static 'administrador/js/script.js'%}"></script>
 </body>
 </html>
+
+
+
