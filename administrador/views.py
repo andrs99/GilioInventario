@@ -44,3 +44,13 @@ def AdministradorInventario(request):
     datos= get_data_user(request.session["email"])
     plantilla='administrador/inventario.html'
     return render(request,plantilla,datos)
+
+
+
+def AdministradorNuevoArticulo(request):
+    if(Validar_session(request)):
+        return redirect("/login_validar/")
+    datos= get_data_user(request.session["email"])
+    plantilla='administrador/nuevo-articulo.html'
+    return render(request,plantilla,datos)
+

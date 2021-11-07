@@ -1,6 +1,4 @@
 {% load static %}
-
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +36,7 @@
     ----- ESTILOS CSS
     --------------------------------------------------------------------------------------------------------------------------------->
 
-    <link rel="stylesheet" href="{% static 'administrador/css/styles.css'%}">
+    <link rel="stylesheet" href="{% static 'administrador/base/css/styles.css'%}">
 </head>
 <body>
     <div class="conteiner">
@@ -252,9 +250,7 @@
             </div>
             <div class="contenido">
                 <div class="contenido-panel">
-                    <div class="panel-box">
-                        {% block content%} {% endblock %}
-                    </div>
+                    {% block content%} {% endblock %}
                 </div>
             </div>
         </div>
@@ -262,7 +258,7 @@
 
 
    
-    <script src="{% static 'administrador/js/script.js'%}"></script>
+    <script src="{% static 'administrador/base/js/script.js'%}"></script>
 </body>
 </html>
 

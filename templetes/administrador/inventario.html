@@ -1,12 +1,18 @@
 {% extends "administrador/base.html" %}
-
-
 {% block title%}Inventario{% endblock %}
-
 {% block content%} 
-
-<h1>lor</h1>
-<h1>ddd</h1>
-
+{% load static %}
+<link rel="stylesheet" href="{% static 'administrador/inventario/css/styles.css'%}">
+<div class="inventario-head">
+    <div class="nuevo">
+        <div id="btnNuevoArticulo" class="button-nuevo">
+            <div class="button-icon">
+                <span class="material-icons">add_circle_outline</span>     
+            </div>
+            <label>Nuevo articulo</label>
+        </div>
+    </div>
+</div>
+<script src="{% static 'administrador/inventario/js/script.js'%}"></script>
         
 {% endblock %}

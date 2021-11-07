@@ -1,0 +1,53 @@
+.inventario-head{
+    background-color: rgb(243, 247, 250);
+    width: calc(100% - 10px);
+    height: 50px;
+    .nuevo{
+        // background-color: blue;
+        width: 150px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        .button-nuevo{
+            position: relative;
+            background-color: rgb(40, 167, 69);
+            user-select: none;
+            height: auto;
+            width: auto;
+            height: 30px;
+            color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 3px;
+            border: 1px solid rgb(243, 247, 250);;
+            cursor: pointer;
+            transition: all .2s;
+            .button-icon{
+                // background-color: red;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            label{
+                // background-color: yellow;
+                width: calc(100% - 30px);
+                height: 30px;
+                padding: 0px 5px 0px 2px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+        }
+        .button-nuevo:hover{
+            background-color: rgb(33, 136, 56);
+            border-color: rgb(33, 136, 56);
+        }
+        .button-nuevo:active{
+            transform: scale(.98);
+        }
+    }
+}

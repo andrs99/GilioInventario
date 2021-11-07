@@ -404,24 +404,6 @@
   height: calc(100% - 10px);
   left: 5px;
   top: 5px;
-  overflow-y: scroll;
-}
-.conteiner .panel .contenido .contenido-panel .panel-box {
-  background-color: #922424;
-  width: calc(100% - 5px);
-}
-.conteiner .panel .contenido .contenido-panel::-webkit-scrollbar {
-  width: 5px;
-  /* Tamaño del scroll en vertical */
-  height: 8px;
-  /* Tamaño del scroll en horizontal */
-}
-.conteiner .panel .contenido .contenido-panel::-webkit-scrollbar-thumb {
-  background: #c0c4dc;
-  border-radius: 4px;
-}
-.conteiner .panel .contenido .contenido-panel::-webkit-scrollbar-thumb:hover {
-  background: #b3b3b3;
 }
 
 /*# sourceMappingURL=styles.css.map */

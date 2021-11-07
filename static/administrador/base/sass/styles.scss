@@ -463,23 +463,9 @@
                 height: calc(100% - 10px);
                 left: 5px;
                 top: 5px;
-                overflow-y: scroll;
-                .panel-box{
-                    background-color: rgb(146, 36, 36);
-                    width: calc(100% - 5px);
-                }
+
             }
-            .contenido-panel::-webkit-scrollbar {
-                width: 5px;     /* Tamaño del scroll en vertical */
-                height: 8px;    /* Tamaño del scroll en horizontal */
-            }
-            .contenido-panel::-webkit-scrollbar-thumb {
-                background: rgb(192, 196, 220);
-                border-radius: 4px;
-            }
-            .contenido-panel::-webkit-scrollbar-thumb:hover {
-                background: #b3b3b3;
-            }
+
         }
     }
 }

@@ -33,6 +33,7 @@ urlpatterns = [
 
     path('administrador/', AdministradorHome),
     path('administrador/inventario', AdministradorInventario),
+    path('administrador/nuevo-articulo', AdministradorNuevoArticulo),
 
 
 
