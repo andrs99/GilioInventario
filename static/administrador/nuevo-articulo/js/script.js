@@ -1,4 +1,15 @@
-const btnNuevoArticulo = document.getElementById('btnNuevoArticulo');
-btnNuevoArticulo.addEventListener('click', function (e) {
-    window.location.href = "http://127.0.0.1:8000/administrador/nuevo-articulo";
-});
+document.getElementById("file").onchange = function(e) {
+	let reader = new FileReader();
+  
+  reader.onload = function(){
+    let preview = document.getElementById('preview'),
+    image = document.createElement('img');
+
+    image.src = reader.result;
+    
+    preview.innerHTML = '';
+    preview.append(image);
+  };
+ 
+  reader.readAsDataURL(e.target.files[0]);
+}
