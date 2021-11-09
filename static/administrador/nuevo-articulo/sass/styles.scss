@@ -177,7 +177,21 @@
                 width: calc(100% - 5px);
                 height: calc(100% - 5px);
                 border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 overflow: hidden;
+                .preview{
+                    background-color: blue;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        width: 210px;
+                        height: 210px;
+                        object-fit: cover;
+                    }
+                }
                 .panel-up{
                     user-select: none;
                     position: absolute;
@@ -188,9 +202,10 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    
                     .upload-btn-wrapper {
                         position: absolute;
-                        overflow: hidden;
+                        // overflow: hidden;
                         input[type=file] {
                             font-size: 100px;
                             position: absolute;
@@ -215,8 +230,18 @@
         }
     }
     .panel-error{
-        background-color: red;
+        // background-color: red;
         width: 100%;
-        height: 40px
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .box-menssage{
+            background-color: rgba(255, 0, 0, 0.719);
+            width: auto;
+            padding: 5px;
+            color: white;
+            border-radius: 2px;
+        }
     }
 }
