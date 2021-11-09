@@ -150,3 +150,73 @@
 
     
 }
+
+.img-box{
+    // background-color: red;
+    width: 100%;
+    height: 250px;
+    .panel-img{
+        // background-color: yellow;
+        width: 100%;
+        height: calc(100% - 40px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .panel-iamgen{
+            background-color: rgb(243, 247, 250);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid 3px rgba(0, 0, 0, 0.082);
+            .panel-inside{
+                position: relative;
+                background-color: rgba(0, 0, 0, 0.082);
+                width: calc(100% - 5px);
+                height: calc(100% - 5px);
+                border-radius: 50%;
+                overflow: hidden;
+                .panel-up{
+                    user-select: none;
+                    position: absolute;
+                    background-color: rgba(0, 0, 0, 0.432);
+                    width: 100%;
+                    height: 50px;
+                    bottom: 0px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .upload-btn-wrapper {
+                        position: absolute;
+                        overflow: hidden;
+                        input[type=file] {
+                            font-size: 100px;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            opacity: 0;
+                        }
+                        button{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border: none;
+                            background-color: transparent;
+                            color: rgb(201, 201, 201);
+                            cursor: pointer;
+                            font-size: 28px;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    .panel-error{
+        background-color: red;
+        width: 100%;
+        height: 40px
+    }
+}

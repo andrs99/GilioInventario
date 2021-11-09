@@ -35,6 +35,7 @@ def AdministradorHome(request):
     if(Validar_session(request)):
         return redirect("/login_validar/")
     datos= get_data_user(request.session["email"])
+    datos['vista'] = "Dashboard"
     plantilla='administrador/home.html'
     return render(request,plantilla,datos)
 
@@ -42,6 +43,7 @@ def AdministradorInventario(request):
     if(Validar_session(request)):
         return redirect("/login_validar/")
     datos= get_data_user(request.session["email"])
+    datos['vista'] = "Inventario"
     plantilla='administrador/inventario.html'
     return render(request,plantilla,datos)
 
@@ -51,6 +53,7 @@ def AdministradorNuevoArticulo(request):
     if(Validar_session(request)):
         return redirect("/login_validar/")
     datos= get_data_user(request.session["email"])
+    datos['vista'] = "Nuevo articulo"
     plantilla='administrador/nuevo-articulo.html'
     return render(request,plantilla,datos)
 

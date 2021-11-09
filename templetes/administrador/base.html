@@ -270,12 +270,14 @@
             </div> -->
             <div class="header-box-contenido">
                 <div class="panel-header">
-                    <label>Nuevo articulo</label>
+                    <label>{{vista}}</label>
                 </div>
             </div>
             <div class="contenido-dinamico">
                 <div class="panel-dinamico">
-                    d
+                    <div class="panel-center">
+                        {% block content %}{% endblock %}
+                    </div>
                 </div>
             </div>
         </div>
@@ -286,4 +288,6 @@
     <script src="{% static 'administrador/base/js/script.js'%}"></script>
 </body>
 </html>
+
+
 

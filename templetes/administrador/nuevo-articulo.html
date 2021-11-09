@@ -2,8 +2,8 @@
 {% block title%}Inventario{% endblock %}
 {% block content%} 
 {% load static %}
-<!-- <link rel="stylesheet" href="{% static 'administrador/nuevo-articulo/css/styles.css'%}">
-<div class="nuevo-articulo">
+<link rel="stylesheet" href="{% static 'administrador/nuevo-articulo/css/styles.css'%}">
+<!-- <div class="nuevo-articulo">
     <div class="header-box">
         <label>Nuevo Articulo</label>
     </div>
@@ -47,15 +47,33 @@
     </div>
 
     
-</div> -->
+</div>  -->
+
+<div class="img-box">
+    <div class="panel-img">
+        <div class="panel-iamgen">
+
+            <div class="panel-inside">
+                <div class="panel-up" id="preview">
+                    <div class="upload-btn-wrapper">
+                        <button class="boton-standar-rw material-icons">add_a_photo</button>
+                        <input id="file" type="file" accept="image/png, image/jpeg">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="panel-error">
+        ff
+    </div>
+</div>
+
+
+
 <script src="{% static 'administrador/nuevo-articulo/js/script.js'%}"></script>
 {% endblock %}
 
 
 
 
-<!-- <div class="panel-icon">
-    sssssssssssssssssssssss
-    <span class="material-icons">add_a_photo</span>
-    <input class="upload-file-buton" type="file" accept="image/png, image/jpeg">
-</div> -->
