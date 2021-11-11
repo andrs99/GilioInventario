@@ -3,51 +3,7 @@
 {% block content%} 
 {% load static %}
 <link rel="stylesheet" href="{% static 'administrador/nuevo-articulo/css/styles.css'%}">
-<!-- <div class="nuevo-articulo">
-    <div class="header-box">
-        <label>Nuevo Articulo</label>
-    </div>
-    <div class="formulario">
-        <div class="panel-img">
-            <div class="box-img" style="background-color: yellow;">
-                <div class="preview" id="preview"></div>
 
-                <div class="panel-up">
-                    <div class="upload-btn-wrapper">
-                        <button class="boton-standar-rw material-icons">add_a_photo</button>
-                        <input id="file" type="file" accept="image/png, image/jpeg">
-                    </div>
-                </div>
-                
-                
-            </div>
-
-        </div>
-        <div class="panel-inputs">
-            <div class="items-fomulario">
-                <input type="text" placeholder="Nombre">
-            </div>
-
-            <div class="items-fomulario">
-                <input type="text" placeholder="Modelo">
-            </div>
-
-            <div class="items-fomulario">
-                <input type="text" placeholder="Area">
-            </div>
-
-            <div class="items-fomulario">
-                <input type="text" placeholder="Tipo">
-            </div>
-
-            <div class="items-fomulario">
-                <input type="text" placeholder="Cantidad">
-            </div>
-        </div>
-    </div>
-
-    
-</div>  -->
 
 <div class="img-box">
     <div class="panel-img">
@@ -69,11 +25,124 @@
         </div>
     </div>
     <div class="panel-error">
-        <div class="box-menssage">
-            Seleccione una imagen del articulo
+        <label class="box-menssage">Seleccione una imagen del articulo</label>
+    </div>
+</div>
+<div class="panel-input">
+    <div class="box-input">
+        <div class="panel-input">
+            <div class="input-inside">
+                <input type="text" placeholder="Nombre">
+            </div>
+        </div>
+
+        <div class="panel-error">
+            Mesnaje de error
         </div>
     </div>
 </div>
+
+
+
+
+<div class="panel-input">
+    <div class="box-input">
+        <div class="panel-input">
+            <div class="input-inside">
+                <input type="text" placeholder="Marca">
+            </div>
+        </div>
+
+        <div class="panel-error">
+            Mesnaje de error
+        </div>
+    </div>
+</div>
+
+
+<div class="panel-input">
+    <div class="box-input">
+        <div class="panel-input">
+            <div class="input-inside">
+                <input type="text" placeholder="Modelo">
+            </div>
+        </div>
+
+        <div class="panel-error">
+            Mesnaje de error
+        </div>
+    </div>
+</div>
+
+<div class="panel-input">
+    <div class="box-input">
+        <div class="panel-input">
+            <div class="input-inside" style="overflow: visible">
+
+                <div class="panel-text">
+                    <input id="selectArea"type="text" placeholder="Area" readonly>
+                </div>
+
+                <div id="btnSelectArea" class="panel-icon-select">
+                    <span class="material-icons">expand_more</span>
+                </div>
+
+                <div id="despliegueSelectArea" class="panel-up-select" style="display: none;">
+
+                    <div class="panel-inside-item">
+                        <div class="box-item" onclick="SelectArea('stock')">
+                            <label id="stock">Stock</label>
+                        </div>
+                    </div>
+
+                    <div class="panel-inside-item">
+                        <div class="box-item" onclick="SelectArea('contabilidad')">
+                            <label id="contabilidad">Contabilidad</label>
+                        </div>
+                    </div>
+
+                    <div class="panel-inside-item">
+                        <div class="box-item" onclick="SelectArea('ventas')">
+                            <label id="ventas">Ventas</label>
+                        </div>
+                    </div>
+
+                    <div class="panel-inside-item">
+                        <div class="box-item" onclick="SelectArea('cafeteria')">
+                            <label id="cafeteria">Cafeteria</label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-error">
+            Mesnaje de error
+        </div>
+    </div>
+</div>
+
+
+<div class="panel-input">
+    <div class="box-input">
+        <div class="panel-input">
+            <div class="input-inside">
+                <input type="text" placeholder="Canitad">
+            </div>
+        </div>
+
+        <div class="panel-error">
+            Mesnaje de error
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
 
 
 

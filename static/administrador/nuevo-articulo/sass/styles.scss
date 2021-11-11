@@ -155,6 +155,7 @@
     // background-color: red;
     width: 100%;
     height: 250px;
+    margin-bottom: 20px;
     .panel-img{
         // background-color: yellow;
         width: 100%;
@@ -237,11 +238,143 @@
         justify-content: center;
         align-items: center;
         .box-menssage{
-            background-color: rgba(255, 0, 0, 0.719);
+            // background-color: rgba(255, 0, 0, 0.719);
             width: auto;
             padding: 5px;
-            color: white;
+            color: red;
             border-radius: 2px;
+            user-select: none;
+            font-size: 13px;
+        }
+    }
+}
+.panel-input{
+    // background-color: yellow;
+    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .box-input{
+        // background-color: blue;
+        .panel-input{
+            background-color: rgba(2, 2, 2, 0.137);
+            width: 350px;
+            height: 40px;
+            margin-bottom: 5px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .input-inside{
+                background-color: rgb(255, 255, 255);
+                position: relative;
+                width: calc(100% - 5px);
+                height: calc(100% - 5px);
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                input{
+                    width: calc(100% - 20px);
+                    height: calc(100% - 5px);
+                    border: none;
+                    outline: none;
+                }
+                .panel-text{
+                    // background-color: red;
+                    width: calc(100% - 35px);
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    input{
+                        cursor: default;
+                    }
+                }
+                .panel-icon-select{
+                    // background-color: rgb(223, 227, 229);;
+                    width: 35px;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    user-select: none;
+                    cursor: pointer;
+                    span{
+                        color: rgba(2, 2, 2, 0.329);
+                        font-size: 28px;
+                    }
+                }
+                .panel-up-select{
+                    background-color: white;
+                    position: absolute;
+                    width: 90%;
+                    height: auto;
+                    max-height: 120px;
+                    top: 40px;
+                    z-index: 1;
+                    border: solid 2px rgb(235, 235, 235);
+                    border-radius: 5px;
+                    overflow-y: scroll;
+                    .panel-inside-item{
+                        // background-color: red;
+                        width: 100%;
+                        height: 40px;
+                        // height: auto;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .box-item{
+                            background-color: rgb(240, 240, 240);
+                            width: calc(100% - 10px);
+                            height: calc(100% - 10px);
+                            border-radius: 3px;
+                            display: flex;
+                            align-items: center;
+                            label{
+                                position: relative;
+                                left: 5px;
+                                font-size: 12px;
+                                color: rgb(98, 98, 116);
+                                user-select: none;
+                            }
+                        }
+                        .box-item:hover{
+                            background-color: rgb(221, 221, 221);
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .panel-up-select::-webkit-scrollbar {
+                    width: 8px;     /* Tamaño del scroll en vertical */
+                    height: 8px;    /* Tamaño del scroll en horizontal */
+                }
+        
+                .panel-up-select::-webkit-scrollbar {
+                    width: 4px;     /* Tamaño del scroll en vertical */
+                    height: 4px;    /* Tamaño del scroll en horizontal */
+                }
+                .panel-up-select::-webkit-scrollbar-thumb {
+                    background-color: rgb(240, 240, 240);
+                    border-radius: 5px;
+                }
+                .panel-up-select::-webkit-scrollbar-thumb:hover {
+                    background: #b3b3b3;
+                }
+            }
+            
+        }
+        .panel-error{
+            text-align: center;
+            position: relative;
+            color: red;
+            font-size: 13px;
+            // background-color: yellow;
+
         }
     }
 }

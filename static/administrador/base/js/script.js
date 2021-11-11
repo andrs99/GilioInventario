@@ -47,7 +47,7 @@ but.addEventListener("click", showHide, false);
 document.addEventListener("click", function (e) {
 
   //obtiendo informacion del DOM para  
-  console.log(e.target);
+  // console.log(e.target);
   var clic = e.target;
 
   if (div.style.display == "block" && clic != div) {
