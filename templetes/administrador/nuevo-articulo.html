@@ -1,8 +1,11 @@
 {% extends "administrador/base.html" %}
 {% block title%}Inventario{% endblock %}
-{% block content%} 
+{% block content%}
 {% load static %}
 <link rel="stylesheet" href="{% static 'administrador/nuevo-articulo/css/styles.css'%}">
+<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
 
 <div class="img-box">
@@ -16,7 +19,7 @@
                 <div class="panel-up">
                     <div class="upload-btn-wrapper">
                         <button class="boton-standar-rw material-icons">add_a_photo</button>
-                        <input id="file" type="file" accept="image/png, image/jpeg">
+                        <input id="imgArticulo" type="file" accept="image/png, image/jpeg">
                     </div>
                 </div>
 
@@ -25,19 +28,19 @@
         </div>
     </div>
     <div class="panel-error">
-        <label class="box-menssage">Seleccione una imagen del articulo</label>
+        <label id="msErrorImg" class="box-menssage"></label>
     </div>
 </div>
 <div class="panel-input">
     <div class="box-input">
         <div class="panel-input">
             <div class="input-inside">
-                <input type="text" placeholder="Nombre">
+                <input id="nombreArticulo" type="text" placeholder="Nombre">
             </div>
         </div>
 
         <div class="panel-error">
-            Mesnaje de error
+            <label id="msErrorNombre"></label>
         </div>
     </div>
 </div>
@@ -49,12 +52,12 @@
     <div class="box-input">
         <div class="panel-input">
             <div class="input-inside">
-                <input type="text" placeholder="Marca">
+                <input id="marcaArticulo" type="text" placeholder="Marca">
             </div>
         </div>
 
         <div class="panel-error">
-            Mesnaje de error
+            <label id="msErrorMarca"></label>
         </div>
     </div>
 </div>
@@ -64,12 +67,12 @@
     <div class="box-input">
         <div class="panel-input">
             <div class="input-inside">
-                <input type="text" placeholder="Modelo">
+                <input id="modeloArticulo" type="text" placeholder="Modelo">
             </div>
         </div>
 
         <div class="panel-error">
-            Mesnaje de error
+            <label id="msErrorModelo"></label>
         </div>
     </div>
 </div>
@@ -80,7 +83,8 @@
             <div class="input-inside" style="overflow: visible">
 
                 <div class="panel-text">
-                    <input id="selectArea"type="text" placeholder="Area" readonly>
+                    <input id="selectArea" type="text" placeholder="Area" readonly>
+                    <input name="id_area" type="hidden">
                 </div>
 
                 <div id="btnSelectArea" class="panel-icon-select">
@@ -89,7 +93,15 @@
 
                 <div id="despliegueSelectArea" class="panel-up-select" style="display: none;">
 
-                    <div class="panel-inside-item">
+                    {% for sucursal in sucursales %}
+                        <div class="panel-inside-item">
+                            <div class="box-item" onclick="SelectArea('{{sucursal.nombre}}')">
+                                <label id="{{sucursal.nombre}}">{{sucursal.nombre}}</label>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                    <!-- <div class="panel-inside-item">
                         <div class="box-item" onclick="SelectArea('stock')">
                             <label id="stock">Stock</label>
                         </div>
@@ -111,31 +123,39 @@
                         <div class="box-item" onclick="SelectArea('cafeteria')">
                             <label id="cafeteria">Cafeteria</label>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
         </div>
 
         <div class="panel-error">
-            Mesnaje de error
+            <label id="msErrorArea"></label>
         </div>
     </div>
 </div>
+
+
+
 
 
 <div class="panel-input">
     <div class="box-input">
         <div class="panel-input">
             <div class="input-inside">
-                <input type="text" placeholder="Canitad">
+                <input id="cantidadArticulo" type="text" placeholder="Canitad"
+                    onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" min="1" maxlength="2">
             </div>
         </div>
 
         <div class="panel-error">
-            Mesnaje de error
+            <label id="msErrorCantidad"></label>
         </div>
     </div>
+</div>
+
+<div class="btn-agregar-articulo">
+    <label onclick="btnGuardarArticulo()" class="panel-btn">Guardar</label>
 </div>
 
 
@@ -146,9 +166,6 @@
 
 
 
+<script type="text/babel" src="{% static 'administrador/nuevo-articulo/js/script.jsx'%}"></script>
 <script src="{% static 'administrador/nuevo-articulo/js/script.js'%}"></script>
 {% endblock %}
-
-
-
-

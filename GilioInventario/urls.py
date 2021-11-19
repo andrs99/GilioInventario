@@ -7,6 +7,10 @@ from login.views import *
 from administrador.views import *
 
 
+from django.conf import settings
+from django.conf.urls.static import static
+
+
 
 
 
@@ -34,6 +38,13 @@ urlpatterns = [
     path('administrador/', AdministradorHome),
     path('administrador/inventario', AdministradorInventario),
     path('administrador/nuevo-articulo', AdministradorNuevoArticulo),
+
+    path('administrador/areas', AdministradorAreas),
+    path('administrador/nueva-area', AdministradorNuevaArea),
+    path('administrador/guardar-area', Guardar_area),
+
+
+
 
 
 
@@ -74,5 +85,9 @@ urlpatterns = [
 
     path('eliminar/', Eliminar),
     path('eliminar_ajax/', Eliminar_ajax),
+
     
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

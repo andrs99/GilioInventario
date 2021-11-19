@@ -42,6 +42,7 @@ def login_ajax(request):
         user = Usuarios.objects.get(email__exact=usuario)
         password_db=user.password
         if(check_password_hash(password_db,password)):
+            request.session["id_usuario"] = user.id
             request.session["sesion"] = True
             request.session["cargo"] = user.cargo
             request.session["nombre"] = user.nombre
@@ -49,7 +50,6 @@ def login_ajax(request):
             request.session["img"] = user.img
             request.session["email"] = user.email
 
-            print(request.session["img"])
             data = {
                 'mensaje': 'Ususario valido',
                 'return': 1

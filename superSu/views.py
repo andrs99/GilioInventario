@@ -216,7 +216,7 @@ def Nuevo_usuario(request):
     return JsonResponse(data)
 
 def SuperSuHome(request):
-    if(Validar_session(request)):
-        return redirect("/login_validar/")
+    # if(Validar_session(request)):
+    #     return redirect("/login_validar/")
     plantilla='supersu/home.html'
     return render(request,plantilla)

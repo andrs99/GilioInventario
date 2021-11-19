@@ -1,25 +1,3 @@
-// const element = <h1>Hello, world</h1>;
-// ReactDOM.render(element, document.getElementById('root'));
-
-
-// function Welcome(props) {
-//   return <h1>Hello, {props.name}</h1>;
-// }
-
-// function App() {
-//   return (
-//     <div>
-//       <Welcome name="Sara" />
-//       <Welcome name="Cahal" />
-//       <Welcome name="Edite" />
-//     </div>
-//   );
-// }
-
-// ReactDOM.render(
-//   <App />,
-//   document.getElementById('root')
-// );
 
 
 
@@ -67,6 +45,7 @@ btnLogout.addEventListener('click', function (e) {
 
 const btnHome = document.getElementById('btnHome');
 const btnInventario = document.getElementById('btnInventario');
+const btnAreas = document.getElementById('btnAreas');
 
 var URLactual = window.location;
 
@@ -74,6 +53,8 @@ if(URLactual == 'http://127.0.0.1:8000/administrador/'){
   btnHome.classList.add("box-item-panel-active");
 }else if (URLactual == 'http://127.0.0.1:8000/administrador/inventario'){
   btnInventario.classList.add("box-item-panel-active");
+}else if (URLactual == 'http://127.0.0.1:8000/administrador/areas'){
+  btnAreas.classList.add("box-item-panel-active");
 }
 
 btnHome.addEventListener('click', function (e) {
@@ -81,6 +62,10 @@ btnHome.addEventListener('click', function (e) {
 });
 btnInventario.addEventListener('click', function (e) {
   window.location.href = "http://127.0.0.1:8000/administrador/inventario";
+});
+
+btnAreas.addEventListener('click', function (e) {
+  window.location.href = "http://127.0.0.1:8000/administrador/areas";
 });
 
 

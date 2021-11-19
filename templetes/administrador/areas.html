@@ -1,0 +1,21 @@
+{% extends "administrador/base.html" %}
+{% block title%}Inventario{% endblock %}
+{% block content%} 
+{% load static %}
+<link rel="stylesheet" href="{% static 'administrador/areas/css/styles.css'%}">
+<div class="inventario-head">
+    <div class="nuevo">
+        <div id="btnNuevaArea" class="button-nuevo">
+            <div class="button-icon">
+                <span class="material-icons">add_circle_outline</span>     
+            </div>
+            <label>Agregar area</label>
+        </div>
+    </div>
+
+
+    
+</div>
+<script src="{% static 'administrador/areas/js/script.js'%}"></script>
+        
+{% endblock %}

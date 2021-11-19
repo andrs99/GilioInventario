@@ -1,0 +1,75 @@
+{% extends "administrador/base.html" %}
+{% block title%}Inventario{% endblock %}
+{% block content%} 
+{% load static %}
+<link rel="stylesheet" href="{% static 'administrador/nuevo-articulo/css/styles.css'%}">
+<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<form id="formNuevaArea" method="post" enctype="multipart/form-data">{% csrf_token %}
+
+    <div class="img-box">
+        <div class="panel-img">
+            <div class="panel-iamgen">
+
+                <div class="panel-inside">
+
+                    <div class="preview" id="preview"></div>
+
+                    <div class="panel-up">
+                        <div class="upload-btn-wrapper">
+                            <button class="boton-standar-rw material-icons">add_a_photo</button>
+                            <input id="imgArea" name="imgArea" type="file" accept="image/png, image/jpeg">
+                            <!-- <input id="imgArea" name="imgArticulo" type="file" accept="image/png, image/jpeg"> -->
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+            </div>
+        </div>
+        <div class="panel-error">
+            <label id="msErrorImg" class="box-menssage"></label>
+        </div>
+    </div>
+    <div class="panel-input">
+        <div class="box-input">
+            <div class="panel-input">
+                <div class="input-inside">
+                    <input id="nombreArea" type="text" placeholder="Nombre" name="nombre">
+                </div>
+            </div>
+
+            <div class="panel-error">
+                <label id="msErrorNombre"></label>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+
+
+
+
+
+
+
+<div class="btn-agregar-articulo">
+    <label onclick="btnGuardarArticulo()" class="panel-btn">Guardar</label>
+</div>
+
+
+
+
+
+
+
+
+
+<script type="text/babel" src="{% static 'administrador/nuevo-articulo/js/script.jsx'%}"></script>
+<script src="{% static 'administrador/nueva-area/js/script.js'%}"></script>
+{% endblock %}

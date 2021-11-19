@@ -1,5 +1,5 @@
 from django.db import models
-# from django.contrib.auth.models import User
+
 
 class Usuarios(models.Model):
 
@@ -25,11 +25,14 @@ class Usuarios(models.Model):
     email=models.CharField(max_length=50,null=False, verbose_name="Email")
     # autenticacion=models.ForeignKey(User,null=True, on_delete=models.PROTECT, verbose_name="Licencias")
 
-    def nombre_completo(self):
-        return "{} {}".format(self.nombre,self.apellido)
+    # def nombre_completo(self):
+    #     return "{} {}".format(self.nombre,self.apellido)
+
+    # def __str__(self):
+    #     return self.nombre_completo
 
     def __str__(self):
-        return self.nombre_completo
+        return self.nombre
 
 
 
